@@ -1,0 +1,8 @@
+venv/
+.idea/
+__pycache__/
+*.pgdump
+*.pgback
+*.pyc
+.venv
+.env
