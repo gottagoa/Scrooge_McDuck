@@ -99,7 +99,7 @@ DATABASES = {
         'NAME': 'mcduck',
         'USER': 'ajzanylsabdanbekova',
         'PASSWORD': '16071996a', 
-        'HOST': 'localhost',
+        'HOST': 'postgres_db',
         'PORT': '5432',  
     }
 }
