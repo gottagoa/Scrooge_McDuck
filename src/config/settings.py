@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-64!j3vti!jv%ni89d9w@#nl-z540^=m)mle9vbxy(ahh!g9l3=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -96,11 +96,11 @@ WSGI_APPLICATION = 'src.config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mcduck',
-        'USER': 'ajzanylsabdanbekova',
-        'PASSWORD': '16071996a', 
-        'HOST': 'localhost',
-        'PORT': '5432',  
+        'NAME': os.getenv('DJANGO_DB_NAME', default="mcduck"),
+        'USER': os.getenv('DJANGO_DB_USER', default='ajzanylsabdanbekova'),
+        'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', default="16071996a"), 
+        'HOST': os.getenv("DJANGO_DB_HOST", default="db"),
+        'PORT': os.getenv("DJANGO_DB_PORT", default=""),  
     }
 }
 
